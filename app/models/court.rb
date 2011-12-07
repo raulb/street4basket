@@ -1,6 +1,8 @@
 class Court < ActiveRecord::Base
 	acts_as_gmappable
 
+	scope :unreleased, where(:name => "")
+
     def gmaps4rails_address
     	address
     end
